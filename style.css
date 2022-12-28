@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?tt1jvu');
+    src:  url('fonts/icomoon.eot?tt1jvu#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?tt1jvu') format('truetype'),
+      url('fonts/icomoon.woff?tt1jvu') format('woff'),
+      url('fonts/icomoon.svg?tt1jvu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-coffee:before {
+    content: "\e900";
+  }
+  .icon-star-empty:before {
+    content: "\e9d7";
+  }
+  .icon-star-full:before {
+    content: "\e9d9";
+  }
+  
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#926d41;
+}
+
+.idonotcare {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #76542d;
+    font-size: 30px;
+    color: white;
+    transition: .3s;
+}
+
+.soory {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+    display: none;
+}
+
+.instart {
+    position: absolute;
+   
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background: #876445dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.instart input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 250px;
+    color: #744102;
+}
+
+.instart button {
+    border-radius: 5px;
+    border: none;
+    outline : none;
+    color: white;
+    background: #d5aa75;
+    transition: .3s;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.instart button:hover {
+    background:#89673f;
+}
+
+
+.congratulation 
+{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    color : #F4DFBA ;
+    background: #876445dd;
+    transition: .5s;
+}
+
+.congratulation h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color : #e0bd81 ;
+}
+
+.congratulation h2 {
+    margin-bottom: 20px;
+
+}
+
+.congratulation button {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #ca975c;
+    color:  #F4DFBA;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.congratulation button:hover {
+    background: #b18450;
+}
+
+.congratulation .stars {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: rgb(245, 232, 184);
+}
+.congratulation .stars .icon-star-full {
+    animation: colorit 1s 1 linear;
+    color: gold;
+}
+
+@keyframes colorit {
+    0% {
+        font-size: 30px;
+    }
+    50% {
+        font-size: 50px;
+        color: gold;
+    }
+    100% {
+        font-size: 30px;
+        color: gold;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color:#9e7445;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+} 
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.blocks-container.no-clicking {
+    pointer-events: none;
+}
+
+.blocks-container {
+    display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.blocks-container .block {
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+    perspective: 400px;
+}
+
+.blocks-container .block .back {
+    transform: rotateY(180deg);
+    background-color: #744102;
+    width: 200px;
+    height: 200px;
+}
+
+.blocks-container .block .front {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: #744102;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.blocks-container .block .front span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #CA965C;
+}
+
+.blocks-container .block.is-flipped ,
+.blocks-container .block.has-match {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 1112px) {
+    .blocks-container {
+       display: none;
+    }
+    .soory {
+        display: block;
+    }
+}
+
+@media (max-height: 960px) {
+    .blocks-container {
+       display: none;
+    }
+    .soory {
+        display: block;
+    }
+}
+
+
+.loading {
+    z-index: 5;
+    position: absolute;
+    background-color: #76542d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #CA965C;
+}
+
+.loading .animation-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.loading .animation-container .jug {
+    left: 0;
+    transform: rotate(60deg);
+    position: absolute;
+    width: 100px;
+    height: 170px;
+}
+
+.loading .animation-container .jug .bottomOfJug {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background:#492a05;
+}
+
+.loading .animation-container .jug .bottomOfJug::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    background:#492a05;
+    transform: skew(-17deg);
+    border-bottom-left-radius: 20px;
+}
+
+.loading .animation-container .jug .bottomOfJug::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    background: #492a05;
+    transform: skew(17deg);
+    border-bottom-right-radius: 20px;
+}
+
+.loading .animation-container .jug .topOfJug {
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    height: calc(100% - 70px - 20px);
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background:#492a05;
+}
+
+.loading .animation-container .jug .topOfJug::before {
+    content: '';
+    position: absolute;
+    left: -12.5px;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    background:#492a05;
+    transform: skew(18deg)
+}
+
+.loading .animation-container .jug .topOfJug::after {
+    content: '';
+    position: absolute;
+    right: -12.5px;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    background: #492a05;
+    transform: skew(-16deg)
+}
+
+.loading .animation-container .grab {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    border: 7px solid #492a05;
+    top: 52px;
+}
+
+.loading .animation-container .headOfJug {
+    position: absolute;
+    width: 95%;
+    height: 30px;
+    background:  #492a05;
+    border-radius: 50%;
+    top: 5px;
+}
+
+.loading .animation-container .headOfJug::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:  #492a05;
+}
+
+.loading .animation-container .cup {
+    position: absolute;
+    bottom: 0;
+    height: 55px;
+    width: 100%;
+}
+
+.loading .animation-container .cup .cupBox {
+    position: absolute;
+    top: 0;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 55px;
+    border: 5px solid #492a05 ;
+    border-top-color: transparent ;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+    overflow: hidden;
+}
+.loading .animation-container .cup .cupBox::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(/Images/wave.svg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    transform: translateX(50px);
+    animation: waving2 4.5s linear 1 alternate;
+    animation-delay: .5s;
+}
+
+
+.loading .animation-container .cup .cupBox::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(/Images/wave.svg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    transform: translateX(50px);
+    animation: waving 4.5s linear 1 alternate;
+    animation-delay: .5s;
+}
+
+@keyframes waving {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-120px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-260px);
+    }
+}
+@keyframes waving2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-260px);
+    }
+}
+
+.loading .animation-container .coffeeFromJug {
+    position: absolute;
+    width: 5px;
+    height: 0px;
+    left: 130px;
+    top: 93px;
+    border-top-right-radius: 10px ;
+    background: #CA965C;
+    animation: drop 5s linear 1 alternate;
+}
+@keyframes drop {
+    0% {
+        height: 0;
+    }
+    10% {
+        height: 202px;
+    }
+    100% {
+        height: 202px;
+    }
+}

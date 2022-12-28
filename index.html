@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Memory-Game</title>
+</head>
+<body>
+    <div class="idonotcare">I told you that i dont care :)</div>
+   <div class="loading">
+        <div class="animation-container">
+            <div class="jug">
+                <div class="headOfJug"></div>
+                <div class="topOfJug"></div>
+                <div class="grab"></div>
+                <div class="bottomOfJug"></div>
+            </div>
+            <div class="coffeeFromJug"></div>
+            <div class="cup">
+                <div class="coffe"></div>
+                <div class="cupBox"></div>
+                <div class="cupHand"></div>
+            </div>
+        </div>
+        loading ...
+    </div>
+    <div class="congratulation">
+        <h1>congratulation</h1>
+        <h2>Wrong Tries : <span class="wrongTries"></span></h2>
+        <div class="stars">
+            <span class="icon-star-empty"></span>
+            <span class="icon-star-empty"></span>
+            <span class="icon-star-empty"></span>
+            <span class="icon-star-empty"></span>
+            <span class="icon-star-empty"></span>
+        </div>
+        <button class="restart">restart</button>
+    </div>
+    <div class="instart">
+        <input placeholder="Name" required maxlength="20" type="text" class="start-input"/>
+        <input placeholder="Favorite coffee" required maxlength="20" type="text" class="favorite" onchange="favorite()"/>
+        <button class="btn-start" type="submit">start</button>
+    </div>
+    <div class="info">
+        <div class="name">
+            Hello <span class="player-name">.</span>
+        </div>
+        <div class="tries">Wrong Tries : <span class="triesCounter">0</span></div>
+    </div>
+
+    <div class="soory">Sorry <snap class="nameForSorry"></snap><br>window size is not enough !<br>Try to scale the window :)</div>
+    <div class="blocks-container" >
+        <div class="block" data-coffee="1">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/1.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="1">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/1.jpg" alt="coffee">
+            </div>
+        </div>
+
+        
+        <div class="block" data-coffee="2">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/2.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="2">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/2.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="3">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/3.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="3">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/3.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="4">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/4.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="4">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/4.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="5">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/5.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="5">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/5.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="6">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/6.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="6">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/6.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="7">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/7.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="7">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/7.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="8">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/8.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="8">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/8.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="9">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/9.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="9">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/9.jpg" alt="coffee">
+            </div>
+        </div>
+
+        <div class="block" data-coffee="10">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/10.jpg" alt="coffee">
+            </div>
+        </div>
+        <div class="block" data-coffee="10">
+            <div class="face front"><span class="icon-coffee"></span></div>
+            <div class="face back">
+                <img src="Images/10.jpg" alt="coffee">
+            </div>
+        </div>
+
+
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
