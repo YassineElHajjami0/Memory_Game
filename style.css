@@ -302,7 +302,7 @@ img {
     width: 100px;
     height: 170px;
 	transform-origin: 100% 15px;
-	animation: rotjug 5s 1 linear;
+	animation: rotjug 5s 1 ease-in-out;
 }
 
 @keyframes rotjug {
