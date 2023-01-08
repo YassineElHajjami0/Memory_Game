@@ -2,7 +2,6 @@ setTimeout(() => {
     document.querySelector(".loading").style.display = "none";
 }, 5000)
 
-
 document.querySelector(".favorite").onfocus = (e) => {
     document.querySelector(".favorite").value = "i don't care";
 }
@@ -38,9 +37,7 @@ console.log(orderRange);
 blocksArr.forEach((block, index) => {
     block.style.order = orderRange[index];
     block.addEventListener('click', () => { flipblock(block) })
-    
 })
-
 
 //shuffling
 function shuffling(array) {
